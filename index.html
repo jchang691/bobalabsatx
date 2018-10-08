@@ -7,10 +7,95 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </header>
 
-<div id="animation">
+<!-- <div id="animation">
   <img id="animation-logo" src="http://bobalabsatx.com/wp-content/uploads/2018/09/final-black-with-present.png"/>
   <canvas id="c"></canvas>
-</div>
+</div> -->
+<nav class="dot-nav">
+  <ul class="dot-nav--list list-unstyled">
+    <li class="dot-nav--item is-active"><a href="#" class="dot-nav--link">Lorem ipsum dolor.</a></li>
+    <li class="dot-nav--item"><a href="#" class="dot-nav--link">Assumenda, officia omnis.</a></li>
+    <li class="dot-nav--item"><a href="#" class="dot-nav--link">Sed, alias totam.</a></li>
+    <li class="dot-nav--item"><a href="#" class="dot-nav--link">Officia, itaque, vitae!</a></li>
+    <li class="dot-nav--item"><a href="#" class="dot-nav--link">Repellendus, veritatis, deserunt.</a></li>
+  </ul>
+</nav>
+
+<style>
+.dot-nav {
+  position: fixed;
+  z-index: 100;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* Fin Init */
+.dot-nav--item {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 28px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.dot-nav--item:before,
+.dot-nav--item:after {
+  content: "";
+}
+.dot-nav--item:before {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  transform: scale(0);
+  opacity: 0;
+  border-radius: 50%;
+  background-color: white;
+  transition: all .3s;
+}
+.dot-nav--item:last-child:after {
+  display: none;
+}
+.dot-nav--item:hover {
+  cursor: pointer;
+}
+.dot-nav--item.is-active:before {
+  opacity: 1;
+  transform: scale(1);
+}
+.dot-nav--link {
+  position: absolute;
+  top: 50%;
+  visibility: hidden;
+  transform: translate(-120%, -50%);
+  width: 200px;
+  padding: 5px 10px;
+  opacity: 0;
+  color: #111;
+  background-color: #fff;
+  transition: all .3s;
+}
+.dot-nav--link:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border-width: 6px 0 6px 8px;
+  border-color: transparent transparent transparent #fff;
+  border-style: solid;
+  transform: translateY(-50%);
+}
+.dot-nav--item:hover .dot-nav--link {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-110%, -50%);
+}
+
+</style>
 
 
 <div class="parallax-window">
@@ -30,22 +115,51 @@
   </div>
 </div>
 
-<div class="container">
-  <section id="images">
-    <div class="title">Bubble Tea + Alcohol = “Mad Science”</div>
-    <div class="img-row">
-      <div class="img-container">
-        <img src="http://bobalabsatx.com/wp-content/uploads/2018/10/1_3.jpg"></img>
-      </div>
-      <div class="img-container">
-        <img src="http://bobalabsatx.com/wp-content/uploads/2018/10/22F3.jpg"></img>
-      </div>
-      <div class="img-container">
-        <img src="http://bobalabsatx.com/wp-content/uploads/2018/10/3_3.png"></img>
-      </div>
-    </div>
-  </section>
 
+
+<section class="arrow-section" id="about">
+  <div>
+    <div class="arrow-right">
+      <span>ABOUT</span>
+    </div>
+  </div>
+  <div class="arrow-description">
+    <span class="teal">
+Welcome to <span class="purple">Boba Labs</span>, Where our scientists are fusing <span class="purple">Boba</span> & <span class="purple">booze</span> to create some badass concoctions.
+    </span>
+  </div>
+</section>
+
+<section id="images">
+  <div class="img-row">
+    <div class="img-container">
+      <img src="http://bobalabsatx.com/wp-content/uploads/2018/10/1_3.jpg"></img>
+    </div>
+    <div class="img-container">
+      <img src="http://bobalabsatx.com/wp-content/uploads/2018/10/22F3.jpg"></img>
+    </div>
+    <div class="img-container">
+      <img src="http://bobalabsatx.com/wp-content/uploads/2018/10/3_3.png"></img>
+    </div>
+  </div>
+</section>
+
+<section class="arrow-section" id="concept">
+  <div>
+    <div class="arrow-right">
+      <span>CONCEPT</span>
+    </div>
+  </div>
+  <div class="arrow-description">
+    <span class="blue">
+Let out your <span class="teal">inner chemistry geek</span> with a night filled with <span class="teal">unlimited boozy boba</span>, raffle prizes, dj entertainment, anda halloween costume contest.
+    </span>
+  </div>
+</section>
+
+
+
+<div class="container">
   <section id="description">
     <div class="title">Unlimited Cocktails + 5 Boba-Themed Art Installations</div>
     <div class="content">
@@ -110,6 +224,73 @@
   </section>
 </div>
 
+<style>
+  .arrow-section {
+    height: 500px;
+  }
+
+  .arrow-section>div:first-child {
+    width: 50%;
+  }
+
+  .arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 250px solid transparent;
+    border-bottom: 250px solid transparent;
+    border-left: 500px solid #a1dfb9;
+    float: left;
+    margin-right: 25%;
+    position: relative;
+  }
+
+  .arrow-right>span:first-child {
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    font-size: 64px;
+    position: absolute;
+    top: 50%;
+    left: -450px;
+    transform: translateY(-50%);
+  }
+
+  #concept .arrow-right {
+    border-left: 500px solid #7dc9e4;
+  }
+
+  .arrow-description {
+    text-align: left;
+    height: 100%;
+    position: relative;
+  }
+
+  .arrow-description>span:first-child {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #about .arrow-description span {
+    color: #a1dfb9;
+  }
+
+  .teal {
+    color: #a1dfb9 !important;
+  }
+
+  .purple {
+    color: #8675c1 !important;
+  }
+
+  .blue {
+    color: #7dc9e4 !important;
+  }
+
+
+</style>
 
 
 
@@ -285,7 +466,7 @@
   }
 
   section {
-    margin: 100px 50px;
+    margin: 100px 25px;
     text-align: center;
   }
 
@@ -451,17 +632,6 @@
 </style>
 
 <script>
-  window.onbeforeunload = function() {
-    window.scrollTo(0, 0);
-  };
-
-  $(function() {
-    $('img').each(function() {
-      $(this).removeAttr('width');
-      $(this).removeAttr('height');
-    });
-  });
-
   var NUM_BALLS = 130,
     DAMPING = 0.3,
     GRAVITY = 0.3,
@@ -750,12 +920,12 @@
           })
         } else {
           cancelAnimationFrame(request);
-          $('.parallax-window').parallax({
-            imageSrc: "http://bobalabsatx.com/wp-content/uploads/2018/10/Main-Landing.jpg"
-          });
-          $('.ticket-parallax').parallax({
-            imageSrc: "http://bobalabsatx.com/wp-content/uploads/2018/09/Boba-Toppings.jpg"
-          });
+          // $('.parallax-window').parallax({
+          //   imageSrc: "http://bobalabsatx.com/wp-content/uploads/2018/10/Main-Landing.jpg"
+          // });
+          // $('.ticket-parallax').parallax({
+          //   imageSrc: "http://bobalabsatx.com/wp-content/uploads/2018/09/Boba-Toppings.jpg"
+          // });
           afterCallback();
         }
       }
@@ -856,66 +1026,81 @@
   }
 
   window.onload = function() {
+    $('.parallax-window').parallax({
+      imageSrc: "http://bobalabsatx.com/wp-content/uploads/2018/10/Main-Landing.jpg"
+    });
+    $('.ticket-parallax').parallax({
+      imageSrc: "http://bobalabsatx.com/wp-content/uploads/2018/09/Boba-Toppings.jpg"
+    });
+
     $(document).ready(function() {
-      window.scrollTo(0, 0)
+      // window.scrollTo(0, 0)
       $('img').each(function() {
         $(this).removeAttr('width')
         $(this).removeAttr('height');
       });
+
+      $('.dot-nav--item').on('click', function(){
+        $this = $(this),
+        $siblings = $this.siblings();
+
+        $this.addClass('is-active');
+        $siblings.removeClass('is-active');
+      })
     });
-    disableScroll();
-    canvas = document.getElementById('c');
-    ctx = canvas.getContext('2d');
-    ctx.canvas.height = window.innerHeight;
-    ctx.canvas.width = window.innerWidth;
-    if (canvas.width > 1000) {
-      ctx.canvas.width = window.innerWidth / 3;
-    }
+    // disableScroll();
+    // canvas = document.getElementById('c');
+    // ctx = canvas.getContext('2d');
+    // ctx.canvas.height = window.innerHeight;
+    // ctx.canvas.width = window.innerWidth;
+    // if (canvas.width > 1000) {
+    //   ctx.canvas.width = window.innerWidth / 3;
+    // }
+    //
+    // while (NUM_BALLS--) add_ball();
+    //
+    // canvas.addEventListener("touchstart", function(e) {
+    //   mouse.down = true;
+    //   document.body.style.cursor = 'none';
+    //   e.preventDefault();
+    // });
+    //
+    // canvas.onmousedown = function(e) {
+    //   mouse.down = true;
+    //   document.body.style.cursor = 'none';
+    //   e.preventDefault();
+    // }
+    //
+    // canvas.addEventListener("touchend", function(e) {
+    //   mouse.down = false;
+    //   document.body.style.cursor = 'default';
+    //   e.preventDefault();
+    // });
+    //
+    // canvas.onmouseup = function(e) {
+    //   mouse.down = false;
+    //   document.body.style.cursor = 'default';
+    //   e.preventDefault();
+    // }
+    //
+    // canvas.addEventListener("touchmove", function(e) {
+    //   var rect = this.getBoundingClientRect();
+    //   mouse.x = (event.targetTouches[0] ? event.targetTouches[0].pageX : event.changedTouches[event.changedTouches.length - 1].pageX) - rect.left;
+    //   mouse.y = (event.targetTouches[0] ? event.targetTouches[0].pageY : event.changedTouches[event.changedTouches.length - 1].pageY) - rect.top;
+    // });
+    //
+    // canvas.onmousemove = function(e) {
+    //   var rect = this.getBoundingClientRect();
+    //   mouse.x = e.clientX - rect.left;
+    //   mouse.y = e.clientY - rect.top;
+    // }
+    //
+    // canvas.onmouseout = function(e) {
+    //   mouse.down = false;
+    //   document.body.style.cursor = 'default';
+    // };
 
-    while (NUM_BALLS--) add_ball();
-
-    canvas.addEventListener("touchstart", function(e) {
-      mouse.down = true;
-      document.body.style.cursor = 'none';
-      e.preventDefault();
-    });
-
-    canvas.onmousedown = function(e) {
-      mouse.down = true;
-      document.body.style.cursor = 'none';
-      e.preventDefault();
-    }
-
-    canvas.addEventListener("touchend", function(e) {
-      mouse.down = false;
-      document.body.style.cursor = 'default';
-      e.preventDefault();
-    });
-
-    canvas.onmouseup = function(e) {
-      mouse.down = false;
-      document.body.style.cursor = 'default';
-      e.preventDefault();
-    }
-
-    canvas.addEventListener("touchmove", function(e) {
-      var rect = this.getBoundingClientRect();
-      mouse.x = (event.targetTouches[0] ? event.targetTouches[0].pageX : event.changedTouches[event.changedTouches.length - 1].pageX) - rect.left;
-      mouse.y = (event.targetTouches[0] ? event.targetTouches[0].pageY : event.changedTouches[event.changedTouches.length - 1].pageY) - rect.top;
-    });
-
-    canvas.onmousemove = function(e) {
-      var rect = this.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
-    }
-
-    canvas.onmouseout = function(e) {
-      mouse.down = false;
-      document.body.style.cursor = 'default';
-    };
-
-    update();
+    // update();
 
   };
 </script>
