@@ -2,106 +2,154 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
 </header>
 
 <!-- <div id="animation">
-  <img id="animation-logo" src="http://bobalabsatx.com/wp-content/uploads/2018/09/final-black-with-present.png"/>
+  <img id="animation-logo" src="https://bobalabsatx.com/wp-content/uploads/2018/09/final-black-with-present.png"/>
   <canvas id="c"></canvas>
 </div> -->
 <nav class="dot-nav">
   <ul class="dot-nav--list list-unstyled">
-    <li class="dot-nav--item is-active"><a href="#" class="dot-nav--link">Lorem ipsum dolor.</a></li>
-    <li class="dot-nav--item"><a href="#" class="dot-nav--link">Assumenda, officia omnis.</a></li>
-    <li class="dot-nav--item"><a href="#" class="dot-nav--link">Sed, alias totam.</a></li>
-    <li class="dot-nav--item"><a href="#" class="dot-nav--link">Officia, itaque, vitae!</a></li>
-    <li class="dot-nav--item"><a href="#" class="dot-nav--link">Repellendus, veritatis, deserunt.</a></li>
+    <li class="dot-nav--item is-active"><a href="#top" class="dot-nav--link" data-number="1">Splash</a></li>
+    <li class="dot-nav--item"><a href="#about" class="dot-nav--link" data-number="2">About</a></li>
+    <li class="dot-nav--item"><a href="#concept" class="dot-nav--link" data-number="3">Concept</a></li>
+    <li class="dot-nav--item"><a href="#description" class="dot-nav--link" data-number="4">Description</a></li>
+    <li class="dot-nav--item"><a href="#sponsors" class="dot-nav--link"  data-number="5">Sponsors</a></li>
+    <li class="dot-nav--item"><a href="#installations" class="dot-nav--link" data-number="6">Installation</a></li>
+    <li class="dot-nav--item"><a href="#contact" class="dot-nav--link" data-number="7">Contact</a></li>
   </ul>
 </nav>
 
 <style>
-.dot-nav {
-  position: fixed;
-  z-index: 100;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-/* Fin Init */
-.dot-nav--item {
-  position: relative;
-  display: block;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 28px;
-  border: 3px solid white;
-  border-radius: 50%;
-}
-.dot-nav--item:before,
-.dot-nav--item:after {
-  content: "";
-}
-.dot-nav--item:before {
-  position: absolute;
-  top: -1px;
-  bottom: -1px;
-  left: -1px;
-  right: -1px;
-  transform: scale(0);
-  opacity: 0;
-  border-radius: 50%;
-  background-color: white;
-  transition: all .3s;
-}
-.dot-nav--item:last-child:after {
-  display: none;
-}
-.dot-nav--item:hover {
-  cursor: pointer;
-}
-.dot-nav--item.is-active:before {
-  opacity: 1;
-  transform: scale(1);
-}
-.dot-nav--link {
-  position: absolute;
-  top: 50%;
-  visibility: hidden;
-  transform: translate(-120%, -50%);
-  width: 200px;
-  padding: 5px 10px;
-  opacity: 0;
-  color: #111;
-  background-color: #fff;
-  transition: all .3s;
-}
-.dot-nav--link:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  width: 0;
-  height: 0;
-  border-width: 6px 0 6px 8px;
-  border-color: transparent transparent transparent #fff;
-  border-style: solid;
-  transform: translateY(-50%);
-}
-.dot-nav--item:hover .dot-nav--link {
-  visibility: visible;
-  opacity: 1;
-  transform: translate(-110%, -50%);
-}
+  .dot-nav {
+    position: fixed;
+    z-index: 100;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
+  /* Fin Init */
+  .dot-nav--item {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 28px;
+    border: 3px solid #a1dfb9;
+    border-radius: 50%;
+  }
+
+  .dot-nav--item:before,
+  .dot-nav--item:after {
+    content: "";
+  }
+
+  .dot-nav--item:before {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    transform: scale(0);
+    opacity: 0;
+    border-radius: 50%;
+    background-color: #a1dfb9;
+    transition: all .3s;
+  }
+
+  .dot-nav--item:last-child:after {
+    display: none;
+  }
+
+  .dot-nav--item:hover {
+    cursor: pointer;
+  }
+
+  .dot-nav--item.is-active:before {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .dot-nav--link {
+    position: absolute;
+    top: 50%;
+    visibility: hidden;
+    transform: translate(-120%, -50%);
+    width: 200px;
+    padding: 5px 10px;
+    opacity: 0;
+    color: #111;
+    background-color: #fff;
+    transition: all .3s;
+  }
+
+  .dot-nav--link:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-width: 6px 0 6px 8px;
+    border-color: transparent transparent transparent #fff;
+    border-style: solid;
+    transform: translateY(-50%);
+  }
+
+  .dot-nav--item:hover .dot-nav--link {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-110%, -50%);
+  }
 </style>
 
+<script>
+  jQuery(document).ready(function($) {
+    var navigationItems = $('nav.dot-nav li'),
+      contentSections = $('.scroll-section');
 
-<div class="parallax-window">
+    updateNavigation();
+    $(window).on('scroll', function() {
+      updateNavigation();
+    });
+
+    navigationItems.on('click', function(event) {
+      event.preventDefault();
+      var href = $($(event.target).find('a')[0]).prop("hash");
+      smoothScroll($(href));
+    });
+
+    function updateNavigation() {
+      contentSections.each(function(){
+        $this = $(this);
+        var activeSection = $('nav.dot-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
+        if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
+          navigationItems.eq(activeSection).addClass('is-active');
+        }else {
+          navigationItems.eq(activeSection).removeClass('is-active');
+        }
+      });
+    }
+
+    function smoothScroll(target) {
+      $('body,html').animate({
+          'scrollTop': target.offset().top
+        },
+        600
+      );
+    }
+  });
+</script>
+
+
+<div class="parallax-window scroll-section" id="top">
   <div class="black-mask"></div>
   <nav>
-    <img class="logo" src="http://bobalabsatx.com/wp-content/uploads/2018/09/final-white-with-present.png"></img>
+    <img class="logo" src="https://bobalabsatx.com/wp-content/uploads/2018/09/final-white-with-present.png"></img>
     <div class="nav btn"><a class="button" href="https://www.eventbrite.com/e/3rd-annual-boba-labs-mad-science-presented-by-tap-atx-tickets-50402235443" target="_blank">GET TICKETS</a></div>
   </nav>
   <div id="splash">
@@ -117,7 +165,7 @@
 
 
 
-<section class="arrow-section" id="about">
+<section class="arrow-section scroll-section" id="about">
   <div>
     <div class="arrow-right">
       <span>ABOUT</span>
@@ -133,18 +181,18 @@ Welcome to <span class="purple">Boba Labs</span>, Where our scientists are fusin
 <section id="images">
   <div class="img-row">
     <div class="img-container">
-      <img src="http://bobalabsatx.com/wp-content/uploads/2018/10/1_3.jpg"></img>
+      <img src="https://bobalabsatx.com/wp-content/uploads/2018/10/1_3.jpg"></img>
     </div>
     <div class="img-container">
-      <img src="http://bobalabsatx.com/wp-content/uploads/2018/10/22F3.jpg"></img>
+      <img src="https://bobalabsatx.com/wp-content/uploads/2018/10/22F3.jpg"></img>
     </div>
     <div class="img-container">
-      <img src="http://bobalabsatx.com/wp-content/uploads/2018/10/3_3.png"></img>
+      <img src="https://bobalabsatx.com/wp-content/uploads/2018/10/3_3.png"></img>
     </div>
   </div>
 </section>
 
-<section class="arrow-section" id="concept">
+<section class="arrow-section scroll-section" id="concept">
   <div>
     <div class="arrow-right">
       <span>CONCEPT</span>
@@ -160,7 +208,7 @@ Let out your <span class="teal">inner chemistry geek</span> with a night filled 
 
 
 <div class="container">
-  <section id="description">
+  <section class="scroll-section" id="description">
     <div class="title">Unlimited Cocktails + 5 Boba-Themed Art Installations</div>
     <div class="content">
       <p>Come out Friday, October 26th for unlimited cocktails that blend the iconic "bubble tea" with booze! Tito’s Vodka, Still Whiskey, Chameleon Cold-Brew, Texas Sake and many more Austin favorites are sponsoring and creating their own unique
@@ -173,20 +221,20 @@ Let out your <span class="teal">inner chemistry geek</span> with a night filled 
     </div>
   </section>
 
-  <section id="sponsors">
+  <section id="sponsors" class="scroll-section">
     <div class="title">Sponsored By...</div>
     <div class="img-row">
       <img src="https://stillaustin.com/wp-content/uploads/2017/04/SA-bottle-logo.png"></img>
       <img src="http://tequilaaficionado.com/wp-content/uploads/2015/02/AmbharBlWh.png"></img>
-      <img src="http://bobalabsatx.com/wp-content/uploads/2018/09/22780547_1403772339748730_2848651159096078427_n.png"></img>
+      <img src="https://bobalabsatx.com/wp-content/uploads/2018/09/22780547_1403772339748730_2848651159096078427_n.png"></img>
       <img style="background-color: black" src="https://www.titosvodka.com/static/img/logo-dark.svg"></img>
       <img src="https://pbs.twimg.com/profile_images/993624232876638208/oAxXjHGH_400x400.jpg"></img>
-      <img src="http://bobalabsatx.com/wp-content/uploads/2018/09/ChameleonBlack_copy.jpg.370x370_q85s.png"></img>
-      <img src="http://bobalabsatx.com/wp-content/uploads/2018/09/dripping-springs-vodka.png"></img>"
+      <img src="https://bobalabsatx.com/wp-content/uploads/2018/09/ChameleonBlack_copy.jpg.370x370_q85s.png"></img>
+      <img src="https://bobalabsatx.com/wp-content/uploads/2018/09/dripping-springs-vodka.png"></img>"
     </div>
   </section>
 
-  <section id="installations">
+  <section id="installations" class="scroll-section">
     <div class="title">Location</div>
     <div id="installation-content">
       <iframe id="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=SiteATX&key=AIzaSyDi7pz-rQOZ4Bi4NdjS7b-i2G-5bxPdDmE" allowfullscreen></iframe>
@@ -207,8 +255,8 @@ Let out your <span class="teal">inner chemistry geek</span> with a night filled 
     </div>
   </div>
 
-  <section id="contact-us">
-    <img class="logo-bigger" src="http://bobalabsatx.com/wp-content/uploads/2018/09/final-black-with-present.png"></img>
+  <section id="contact" class="scroll-section">
+    <img class="logo-bigger" src="https://bobalabsatx.com/wp-content/uploads/2018/09/final-black-with-present.png"></img>
   </section>
 
   <div style="text-align: center;">
@@ -227,10 +275,11 @@ Let out your <span class="teal">inner chemistry geek</span> with a night filled 
 <style>
   .arrow-section {
     height: 500px;
+    display: flex;
   }
 
   .arrow-section>div:first-child {
-    width: 50%;
+    width: 40%;
   }
 
   .arrow-right {
@@ -239,7 +288,6 @@ Let out your <span class="teal">inner chemistry geek</span> with a night filled 
     border-top: 250px solid transparent;
     border-bottom: 250px solid transparent;
     border-left: 500px solid #a1dfb9;
-    float: left;
     margin-right: 25%;
     position: relative;
   }
@@ -262,6 +310,7 @@ Let out your <span class="teal">inner chemistry geek</span> with a night filled 
     text-align: left;
     height: 100%;
     position: relative;
+    width: 50%;
   }
 
   .arrow-description>span:first-child {
@@ -289,7 +338,33 @@ Let out your <span class="teal">inner chemistry geek</span> with a night filled 
     color: #7dc9e4 !important;
   }
 
+  @media only screen and (max-width: 450px) {
+    .arrow-section {
+      flex-direction: column !important;
+      height: 250px !important;
+    }
 
+    .arrow-description {
+      width: 90% !important;
+    }
+
+    .arrow-description>span:first-child {
+      font-size: 18px !important;
+      transform: none !important;
+    }
+
+    .arrow-right {
+      border-top: 100px solid transparent !important;
+      border-bottom: 100px solid transparent !important;
+      border-left: 250px solid #a1dfb9 !important;
+    }
+
+    .arrow-right>span:first-child {
+      font-size: 32px !important;
+      left: -225px !important;
+    }
+
+  }
 </style>
 
 
@@ -379,6 +454,10 @@ Let out your <span class="teal">inner chemistry geek</span> with a night filled 
   }
 
   @media only screen and (max-width: 450px) {
+    .parallax-window {
+      margin: 0px !important;
+    }
+
     .splash-title {
       font-size: 100px !important;
       margin-bottom: 0px !important;
@@ -492,7 +571,6 @@ Let out your <span class="teal">inner chemistry geek</span> with a night filled 
   section#description .content {
     width: 50%;
     text-align: left;
-    margin-left: auto;
   }
 
   .title {
@@ -546,11 +624,11 @@ Let out your <span class="teal">inner chemistry geek</span> with a night filled 
   }
 
   #installation-1 {
-    background-image: url("http://bobalabsatx.com/wp-content/uploads/2018/09/ATX_boba.jpg");
+    background-image: url("https://bobalabsatx.com/wp-content/uploads/2018/09/ATX_boba.jpg");
   }
 
   #installation-2 {
-    background-image: url("http://bobalabsatx.com/wp-content/uploads/2018/09/Karen-Loves-BobaLabs.jpg");
+    background-image: url("https://bobalabsatx.com/wp-content/uploads/2018/09/Karen-Loves-BobaLabs.jpg");
   }
 
   #map {
@@ -921,10 +999,10 @@ Let out your <span class="teal">inner chemistry geek</span> with a night filled 
         } else {
           cancelAnimationFrame(request);
           // $('.parallax-window').parallax({
-          //   imageSrc: "http://bobalabsatx.com/wp-content/uploads/2018/10/Main-Landing.jpg"
+          //   imageSrc: "https://bobalabsatx.com/wp-content/uploads/2018/10/Main-Landing.jpg"
           // });
           // $('.ticket-parallax').parallax({
-          //   imageSrc: "http://bobalabsatx.com/wp-content/uploads/2018/09/Boba-Toppings.jpg"
+          //   imageSrc: "https://bobalabsatx.com/wp-content/uploads/2018/09/Boba-Toppings.jpg"
           // });
           afterCallback();
         }
@@ -1027,10 +1105,10 @@ Let out your <span class="teal">inner chemistry geek</span> with a night filled 
 
   window.onload = function() {
     $('.parallax-window').parallax({
-      imageSrc: "http://bobalabsatx.com/wp-content/uploads/2018/10/Main-Landing.jpg"
+      imageSrc: "https://bobalabsatx.com/wp-content/uploads/2018/10/Main-Landing.jpg"
     });
     $('.ticket-parallax').parallax({
-      imageSrc: "http://bobalabsatx.com/wp-content/uploads/2018/09/Boba-Toppings.jpg"
+      imageSrc: "https://bobalabsatx.com/wp-content/uploads/2018/09/Boba-Toppings.jpg"
     });
 
     $(document).ready(function() {
@@ -1040,9 +1118,9 @@ Let out your <span class="teal">inner chemistry geek</span> with a night filled 
         $(this).removeAttr('height');
       });
 
-      $('.dot-nav--item').on('click', function(){
+      $('.dot-nav--item').on('click', function() {
         $this = $(this),
-        $siblings = $this.siblings();
+          $siblings = $this.siblings();
 
         $this.addClass('is-active');
         $siblings.removeClass('is-active');
